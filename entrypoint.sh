@@ -22,6 +22,12 @@ echo "Generating wireguard configuration for..."
 echo $EMAIL
 echo $COUNTRY
 echo $DEVICE
+SESSIONID=x
+
+FILE=/etc/wireguard/sessid.txt
+if test -f "$FILE"; then
+    SESSIONID=`cat $FILE`
+fi
 
 python3 /usr/local/bin/fetchwg.py $EMAIL $PASSWORD $COUNTRY $DEVICE $SESSIONID
 

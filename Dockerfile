@@ -18,7 +18,6 @@ ENV EMAIL=x
 ENV PASSWORD=x
 ENV COUNTRY=de
 ENV DEVICE=x
-ENV SESSIONID=x
 
 VOLUME [ "/etc/wireguard" ]
 
