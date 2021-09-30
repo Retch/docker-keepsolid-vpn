@@ -26,3 +26,6 @@ COPY fetchwg.py /usr/local/bin/
 ENTRYPOINT ["entrypoint.sh"]
 
 EXPOSE 8118
+
+HEALTHCHECK --interval=1m --timeout=10s \
+    CMD curl --fail http://cloudflare.com || exit 1
