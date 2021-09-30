@@ -2,6 +2,8 @@
 
 set -e
 
+crond &
+
 CONFFILE=/etc/privoxy/config
 PIDFILE=/var/run/privoxy.pid
 
