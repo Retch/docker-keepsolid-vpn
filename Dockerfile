@@ -27,5 +27,5 @@ ENTRYPOINT ["entrypoint.sh"]
 
 EXPOSE 8118
 
-HEALTHCHECK --interval=1m --timeout=10s \
-    CMD curl -S --fail http://cloudflare.com || exit 1
+HEALTHCHECK --interval=1m --timeout=10s --retries=1 \
+    CMD curl -sS --fail http://cloudflare.com || exit 1
